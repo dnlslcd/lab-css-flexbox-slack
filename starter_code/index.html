@@ -8,21 +8,25 @@
 
   <!-- link the Font Awesome stylesheet - CDN -->
   <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- link your styles -->
   <link rel="stylesheet" href="./stylesheets/style.css" />
-
+  
   <link rel="icon" type="image/x-icon" href="./images/slack-icon.png">
   <title>Slack is your digital HQ | Slack</title>
 </head>
 
-<body>
+<body class="bg-fuchsia-950">
   <!-- NAVBAR -->
+  <!-- Tiene que ser un flex, donde los items estan centrados en el cross axis, los items estan separados y ademas tiene un padding  -->
   <nav>
+  <!-- Este DIV que pertenece al logo quiero que ocupe una tercera parte de todo el width disponible -->
+
     <div>
       <img src="./images/slack-logo.png" alt="Slack logo" />
 
-      <ul>
+      <ul class="hidden">
         <li>
           <a href="#">Product</a>
         </li>
@@ -62,13 +66,19 @@
   <!-- HEADER -->
   <header>
     <div>
+      <!-- Texto en blanco, mucho más grande que los demás, con la fuente algo negrita y el texto centrado -->
+
       <h1>Great teamwork starts with a digital HQ</h1>
 
       <p>Slack is free to try for as long as you'd like.</p>
 
-      <div>
-        <button>Sign up with email</button>
+            <!-- Este DIV tiene un margin top, y todos sus hijos estan separados un poco entre ellos space-y-2 -->
 
+      <div>
+       <!-- tiene un fondo blanco, un color texto fuchsia, esta en mayusuclas, negrita, quiero convertirlo en un elemento de tipo bloque (para que ocupe todo el ancho disponible), es posible que necesiteis la regla w-full, (width 100%), tiene algo de padding y tiene las esquinas redondeadas -->
+        <button>Sign up with email</button>
+       
+        <!-- Este es complicadom se puede conseguir con posicionamiento relativo y absoluto-->
         <button>
           <img src="./images/logo-google.png" alt="Google logo" />
           <span>Sign up with Google</span>
@@ -138,7 +148,10 @@
 
   </main>
 
+  <!-- Intentad maquetar el Footer con tailwind -->
   <footer>
+  
+    <!-- Para separar los elementos entre si usad space-y -->
     <ul>
       <li>Status</li>
       <li>Privacy</li>
@@ -150,7 +163,8 @@
     </ul>
 
     <hr>
-
+    
+    <!-- es un flex, aplicadlo con tailwind -->
     <ul>
       <li>
         <i class="fab fa-twitter"></i>
